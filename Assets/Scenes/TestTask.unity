@@ -1067,18 +1067,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2989008507190626533, guid: f6dc748cea78cd446ba2b0f8a93c9942, type: 3}
-      propertyPath: infoOverlayGameObject
-      value: 
-      objectReference: {fileID: 1053784393}
-    - target: {fileID: 4313310109220056459, guid: f6dc748cea78cd446ba2b0f8a93c9942, type: 3}
-      propertyPath: infoOverlayGameObject
-      value: 
-      objectReference: {fileID: 1053784393}
-    - target: {fileID: 4400037512257638936, guid: f6dc748cea78cd446ba2b0f8a93c9942, type: 3}
-      propertyPath: infoOverlayGameObject
-      value: 
-      objectReference: {fileID: 1053784393}
     - target: {fileID: 8795975495217092713, guid: f6dc748cea78cd446ba2b0f8a93c9942, type: 3}
       propertyPath: m_Name
       value: ENGINE_ROOM

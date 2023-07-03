@@ -20,18 +20,18 @@ public class DescriptionOverlay : MonoBehaviour, IInfoOverlay
 		textWrapper.SetActive(false);
 	}
 
-	public void ShowInfo(PartInfo info)
+	public void ShowInfo(PartInfo partInfo)
 	{
 		textWrapper.SetActive(true);
 
-		SetText(info);
+		SetText(partInfo);
 		ResizeOverlay();
 	}
 
-	private void SetText(PartInfo info)
+	private void SetText(PartInfo partInfo)
 	{
-		nameTmpText.text = info.partName;
-		descriptionTmpText.text = info.partDescription;
+		nameTmpText.text = partInfo.name;
+		descriptionTmpText.text = partInfo.description;
 	}
 
 	private void ResizeOverlay()

@@ -19,13 +19,14 @@ public class InteractionController : MonoBehaviour
 	{
 		// Do raycast from mouse position to world on left mouse button click
 		if (Input.GetMouseButtonDown(0)) {
+			// Hide info overlay before showing it,
+			// so if there will be nothing to show, overlay will not appear
+			_infoOverlay.HideInfo();
+
 			_ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
 			if (Physics.Raycast(_ray, out var raycastHit, mouseRayCastDistance)) {
 				if (raycastHit.transform.TryGetComponent<IPartInfo>(out var partInfo)) {
 					_infoOverlay.ShowInfo(partInfo.GetPartInfo());
-				}
-				else {
-					_infoOverlay.HideInfo();
 				}
 			}
 		}
