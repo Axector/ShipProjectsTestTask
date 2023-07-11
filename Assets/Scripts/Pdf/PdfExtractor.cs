@@ -14,7 +14,7 @@ public class PdfExtractor : MonoBehaviour
 	{
 		string[] paths = StandaloneFileBrowser.OpenFilePanel("Open File", "", "pdf", false);
 		if (paths.Length > 0) {
-			StartCoroutine(OutputRoutineOpen(new System.Uri(paths[0]).AbsoluteUri));
+			StartCoroutine(OutputRoutineOpen(paths[0]));
 		}
 	}
 
@@ -24,7 +24,7 @@ public class PdfExtractor : MonoBehaviour
 		yield return request.SendWebRequest();
 
 		if (request.result != UnityWebRequest.Result.Success) {
-			Debug.Log("WWW ERROR: " + request.error);
+			Debug.Log("UnityWebRequest error: " + request.error);
 		}
 		else {
 			pdfContentText.text = ReadPdf(url);
